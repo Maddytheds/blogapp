@@ -1,0 +1,281 @@
+/* ---------------navbar--------------- */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 2px solid; */
+  width: 60vw;
+  margin: auto;
+
+}
+.navbar h2{
+  font-size: 40px;
+  color: #7257fa;
+}
+
+.navbar a {
+  margin-left: 20px;
+  text-decoration: none;
+  padding: 6px;
+}
+.links{
+  display: flex;
+
+}
+.navbar a:hover {
+  color:  #937efe;
+}
+#homeBtn{
+
+  font-size: 20px;
+  font-weight: 500;
+  margin-right: 20px;
+}
+#addBlogBtn{
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  height: 30px;
+  width: 100px;
+  border-radius: 8px;
+  background: #7257fa;
+  color: white;
+}
+
+
+/* ---------------PostCard--------------- */
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card {
+  
+  --border-radius: 0.75rem;
+  --primary-color: #7257fa;
+  --secondary-color: #3c3852;
+  width: 70vw;
+  font-family: "Arial";
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: #f1f1f3;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+  position: relative;
+  margin: auto;
+}
+
+.card > * + * {
+  margin-top: 1.1em;
+}
+
+.card .card__content {
+  color: var(--secondary-color);
+  font-size: 0.86rem;
+}
+
+.card .card__title {
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.card .card__date {
+  color: #6e6b80;
+  font-size: 0.8rem;
+}
+.deleteBlog{
+  height: 30px;
+  width: 150px;
+  color: white;
+  font-size: 12px;
+  /* position: absolute; */
+  background: var(--primary-color);
+  border: none;
+  padding: 0.4rem;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  bottom: 0;
+  right: 0;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card .card__arrow {
+  height: 20px;
+  width: 150px;
+  position: absolute;
+  background: var(--primary-color);
+  padding: 0.4rem;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  bottom: 0;
+  right: 0;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card svg {
+  transition: 0.2s;
+}
+
+/* hover */
+.card:hover .card__title {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.card:hover .card__arrow {
+  background: #111;
+}
+.card:hover .deleteBlog {
+  background: #111;
+}
+.card:hover .card__arrow svg {
+  transform: translateX(3px);
+}
+/* ----------------------- */
+.homePage{
+  max-width: 70vw;
+  margin: auto;
+}
+.homePage h1{
+  margin-top: 100px;
+  color: #7257fa;
+  margin: 20px;
+  
+}
+
+.editDel svg{
+  height: 20px;
+  align-items: center;
+}
+
+/* --------------create-------------- */
+
+.createBlog {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+.createBlog form {
+  display: flex;
+  flex-direction: column;
+}
+
+.createBlog label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+.createBlog input[type="text"],
+.createBlog textarea {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #333;
+}
+
+.createBlog input[type="text"]:focus,
+.createBlog textarea:focus {
+  border-color: #7257fa;
+  outline: none;
+}
+
+.createBlog button {
+  background-color: #7257fa;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.createBlog button:hover {
+  background-color: #5a45c2;
+}
+
+
+.detailPost {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.detailPost:hover {
+  background-color: #f1f1f1;
+}
+
+.detailPost h1 {
+  font-size: 2.5em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.detailPost h1:hover {
+  color: #007BFF;
+}
+
+.detailPost h2 {
+  font-size: 2em;
+  color: #555;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.detailPost h2:hover {
+  color: #0056b3;
+}
+
+.detailPost p {
+  font-size: 1.2em;
+  color: #666;
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+.detailPost p:hover {
+  color: #333;
+}
+
+/* Additional styling for responsiveness */
+@media (max-width: 600px) {
+  .detailPost {
+    padding: 15px;
+  }
+
+  .detailPost h1 {
+    font-size: 2em;
+  }
+
+  .detailPost h2 {
+    font-size: 1.5em;
+  }
+
+  .detailPost p {
+    font-size: 1em;
+  }
+}
